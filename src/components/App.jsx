@@ -4,7 +4,7 @@ import { Box } from "./Box";
 import { Form } from "./ContactForm/ContactForm";
 import { ContactList } from "./ContactList/ContactList";
 import { Filter } from "./Filter/Filter";
-import { get } from "styled-system";
+
 
 export class App extends Component {
  state = {
@@ -29,9 +29,12 @@ export class App extends Component {
       ...template,
       id: nanoid(),
     }
-    this.setState(({contacts}) => ({
+    this.setState(({ contacts }) => ({
+      
        contacts:[contact, ...contacts]
-     }))
+    }))
+    
+    
   }
 
   changeFilter = (event) => {
